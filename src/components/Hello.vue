@@ -16,10 +16,12 @@ export default class Hello extends Vue {
   created() {
     console.log('Hello Vue created!')
   }
-
+  // We need to register the hooks in ../hooks.ts to be able to use them in components
+  // and also import it before we instantiate the vue instance in ../main.ts
+  // router hooks are async, so we need to call next() to progress
   beforeRouteEnter(to, from, next) {
-    console.log('Enter')
-    next()
+    console.log('Enter');
+    next();
   }
 }
 </script>

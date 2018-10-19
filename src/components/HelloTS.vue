@@ -6,13 +6,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
 @Component({})
 export default class HelloTS extends Vue {
   created() {
     console.log('Hello TS created!')
+  }
+
+  //Adding to demo
+  beforeRouteLeave(to, from, next) {
+    console.log('Leaving HelloTS');
+    next();
   }
 }
 </script>

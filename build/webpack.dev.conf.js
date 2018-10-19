@@ -32,7 +32,7 @@ module.exports = merge(baseWebpackConfig, {
     }),
     new FriendlyErrorsPlugin({
       compilationSuccessInfo: {
-        notes: ['blablabllabla']
+        notes: ['Successfully compiled']
       },
       additionalFormatters: [],
       additionalTransformers: []
