@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <MyCheckbox :title="checkbox.title" :value="checkbox.value" v-model="checkbox.checked"/>
+    <!-- Note: v-model will create a 2 way binding-->
+    <MyCheckbox :name="checkbox.name" :title="checkbox.title" :value="checkbox.value" v-model="checkbox.checked"/>
   </div>
 </template>
 
@@ -16,10 +17,11 @@ import MyCheckbox from './components/MyCheckbox.vue'
   }
 })
 export default class App extends Vue {
-  checkbox = {
+  checkbox: Record<string, any> = {
+    name: 'myTestCheckbox',
     title: 'Fancy checkbox',
     value: 'checkbox-id',
-    checked: true
+    checked: false
   }
 }
 </script>
