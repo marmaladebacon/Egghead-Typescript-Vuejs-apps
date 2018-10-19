@@ -10,10 +10,13 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import colorDirective from '../color-directive'
 
+//Directives like other component properties are passed into the component decorator
+//For a full list of available options see the left hand pane at
+// https://vuejs.org/v2/api/
 @Component({
   directives: {
     colorDirective
-  }
+  },
 })
 export default class Hello extends Vue {
   message: string = 'Hello Vue'
