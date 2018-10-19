@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <Hello/>
+    <!-- Passing in any type that is not a string requires v-bind:, or the shorthand :-->
+    <Hello :toggle="true" msg="ldkfjslkd" />
   </div>
 </template>
 
