@@ -17,14 +17,11 @@ import axios from 'axios'
   }
 })
 export default class App extends Vue {
-  @Provide() http = axios
+  //to inject with a different name
+  @Provide('myHttpModule')
+  http = axios
 }
 </script>
-
-
-
-
-
 
 <style>
 #app {
